@@ -86,19 +86,22 @@
     <div class="row margin-bottom-large">
         <div class="starts-at-full ends-at-two-thirds">
 
-            <h1>Page not found.</h1>
-            <p>We apologise for the inconvenience. Our website team is working on the error, and we will have normal service restored as soon as possible.</p>
+		<h1>Page not found.</h1>
+		<p>If you typed the web address, check it is correct.<br/>
+		If you pasted the web address, check you copied the entire address.</p>
             <div class="home-alert">
-                <h2>The following links may help you find the information you need:</h2>
-                <ul>
-                    <li><a href="https://discovery.nationalarchives.gov.uk/">Search the catalogue</a></li>
-                    <li><a href="https://nationalarchives.gov.uk/help/a-to-z/">Find something using the website A-Z index</a></li>
-                    <li><a href="https://www.nationalarchives.gov.uk/help-with-your-research/#find-a-research-guide">Find a research guide</a></li>
-                    <li><a href="https://shop.nationalarchives.gov.uk/">Visit our online shop</a></li>
-                    <li><a href="https://www.nationalarchives.gov.uk/about/visit-us/whats-on/">See what's on at The National Archives</a></li>
-                    <li><a href="https://nationalarchives.gov.uk">Return to the homepage</a></li>
-                </ul>
-            </div>
+		<h2>The following links may help you find the information you need.</h2>
+
+		<ul>
+			<li><a href="https://webarchive.nationalarchives.gov.uk/" id="wa_link">See an archived version of this page</a> in the UK Government Web Archive</li>
+			<li>Return to the <a href="/">homepage</a></li>
+			<li>Search <a href="https://discovery.nationalarchives.gov.uk">Discovery</a>, our catalogue</li>
+			<li>Use a <a href="https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/">research guide</a> to help with your historical research</li>
+			<li>Find something in the <a href="https://www.nationalarchives.gov.uk/help/a-to-z/">A-Z</a></li>
+			<li>Visit the online <a href="https://shop.nationalarchives.gov.uk/">shop</a></li>
+			<li>See <a href="https://www.nationalarchives.gov.uk/about/visit-us/whats-on/">what’s on</a> at The National Archives</li>
+		</ul>
+	    </div>
         </div>
     </div>
 </div>
@@ -149,6 +152,12 @@
     </div>
     <!-- end footer-wrapper -->
 </footer>
-
+<script>
+    aTag = document.getElementById('wa_link');
+    var re = /((?![?#]).)*/;
+    var url = window.location.href;
+    var uri = url.match(re);
+    aTag.href = aTag.href + 'ukgwa/+/' + uri[0];
+</script>
 </body>
 </html>
